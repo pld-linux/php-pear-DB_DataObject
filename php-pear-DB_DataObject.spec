@@ -3,15 +3,16 @@
 %define         _subclass       DataObject
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - An SQL Builder, Object Interface to Database Tables
 Summary(pl):	%{_pearname} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	7165287e4ea39f6e41b7e830aa97225f
+# Source0-md5:	a99498e466b3bb0297c6119a481715b2
 URL:		http://pear.php.net/package/DB_DataObject/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear

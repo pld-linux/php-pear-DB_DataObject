@@ -24,9 +24,9 @@ The core class is designed to be extended for each of your tables so
 that you put the data logic inside the data classes. Included is a
 Generator to make your configuration files and your base classes.
 DataObject performs 2 tasks:
- - Builds SQL statements based on the objects vars and the builder
-   methods,
- - acts as a datastore for a table row.
+- Builds SQL statements based on the objects vars and the builder
+  methods,
+- acts as a datastore for a table row.
 
 In PEAR status of this package is: %{_status}.
 
@@ -35,9 +35,9 @@ G³ówna klasa zosta³a stworzona tak, by byæ rozszerzaln± dla ka¿dej
 tabeli, wiêc mo¿na umie¶ciæ logikê danych w klasach danych. Do³±czony
 jest generator do tworzenia plików konfiguracyjnych i klas bazowych.
 DataObject pe³ni 2 zadania:
- - tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
-   tworzenia
- - przechowuje dane z wiersza tabeli.
+- tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
+  tworzenia
+- przechowuje dane z wiersza tabeli.
 
 Ta klasa ma w PEAR status: %{_status}.
 

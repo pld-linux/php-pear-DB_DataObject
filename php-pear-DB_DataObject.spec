@@ -3,7 +3,7 @@
 %define         _subclass       DataObject
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_class}_%{_subclass} - An SQL Builder, Object Interface to Database Tables
-Summary(pl):	%{_class}_%{_subclass} -
+Summary(pl):	%{_class}_%{_subclass} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	0.2
 Release:	1
@@ -18,12 +18,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The core class is designed to be extended for each of your tables so
-that you put the data logic inside the data classes. included is a
+that you put the data logic inside the data classes. Included is a
 Generator to make your configuration files and your base classes.
 DataObject performs 2 tasks:
  - Builds SQL statements based on the objects vars and the builder
    methods,
- - acts as a datastore for a table row
+ - acts as a datastore for a table row.
+
+%description -l pl
+G³ówna klasa zosta³a stworzona tak, by byæ rozszerzaln± dla ka¿dej
+tabeli, wiêc mo¿na umie¶ciæ logikê danych w klasach danych. Do³±czony
+jest generator do tworzenia plików konfiguracyjnych i klas bazowych.
+DataObject pe³ni 2 zadania:
+ - tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
+   tworzenia
+ - przechowyuje dane z wiersza tabeli.
 
 %prep
 %setup -q -c

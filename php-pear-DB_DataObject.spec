@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - An SQL Builder, Object Interface to Database Tables
 Summary(pl):	%{_pearname} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	aadd7b9f9ee50bff61d942d41c1e673c
+# Source0-md5:	7165287e4ea39f6e41b7e830aa97225f
 URL:		http://pear.php.net/package/DB_DataObject/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear

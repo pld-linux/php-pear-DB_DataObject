@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          DB
-%define         _subclass       DataObject
+%define		_class		DB
+%define		_subclass	DataObject
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - An SQL Builder, Object Interface to Database Tables
-Summary(pl):	%{_pearname} - SQL Builder, obiektowy interfejs do tabel bazodanowych
+Summary:	%{_pearname} - an SQL builder, object interface to database tables
+Summary(pl):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.5
 Release:	1

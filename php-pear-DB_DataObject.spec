@@ -5,7 +5,7 @@
 Summary:	%{_class}_%{_subclass} - An SQL Builder, Object Interface to Database Tables
 Summary(pl):	%{_class}_%{_subclass} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
-Version:	0.2
+Version:	0.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP

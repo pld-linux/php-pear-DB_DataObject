@@ -32,7 +32,7 @@ jest generator do tworzenia plików konfiguracyjnych i klas bazowych.
 DataObject pe³ni 2 zadania:
  - tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
    tworzenia
- - przechowyuje dane z wiersza tabeli.
+ - przechowuje dane z wiersza tabeli.
 
 %prep
 %setup -q -c

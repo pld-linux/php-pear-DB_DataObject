@@ -2,10 +2,10 @@
 %define         _class          DB
 %define         _subclass       DataObject
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - An SQL Builder, Object Interface to Database Tables
-Summary(pl):	%{_class}_%{_subclass} - SQL Builder, obiektowy interfejs do tabel bazodanowych
+Summary:	%{_pearname} - An SQL Builder, Object Interface to Database Tables
+Summary(pl):	%{_pearname} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP

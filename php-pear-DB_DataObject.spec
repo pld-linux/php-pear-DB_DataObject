@@ -1,11 +1,12 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          DB
 %define         _subclass       DataObject
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - An SQL Builder, Object Interface to Database Tables
 Summary(pl):	%{_pearname} - SQL Builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
-Version:	0.10
+Version:	0.13
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -25,6 +26,8 @@ DataObject performs 2 tasks:
    methods,
  - acts as a datastore for a table row.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 G³ówna klasa zosta³a stworzona tak, by byæ rozszerzaln± dla ka¿dej
 tabeli, wiêc mo¿na umie¶ciæ logikê danych w klasach danych. Do³±czony
@@ -33,6 +36,8 @@ DataObject pe³ni 2 zadania:
  - tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
    tworzenia
  - przechowuje dane z wiersza tabeli.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c

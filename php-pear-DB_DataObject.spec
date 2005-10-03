@@ -15,7 +15,10 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	30a6b3356c847d315455b3107db95e28
 URL:		http://pear.php.net/package/DB_DataObject/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:4.3
 Requires:	php-pear >= 4:1.0-8
+Requires:	php-pear-DB >= 1.7.0
+Requires:	php-pear-Date >= 1.4.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

@@ -14,6 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	88196abc5045bac45b5fc2e00edc130a
 URL:		http://pear.php.net/package/DB_DataObject/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-common >= 3:4.3
 Requires:	php-pear >= 4:1.0-8

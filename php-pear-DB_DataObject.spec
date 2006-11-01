@@ -8,11 +8,12 @@ Summary:	%{_pearname} - an SQL builder, object interface to database tables
 Summary(pl):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.8.4
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	770c44d243066340d639b063235dcc02
+Patch0:		DB_DataObject-PLD.patch
 URL:		http://pear.php.net/package/DB_DataObject/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -51,11 +52,14 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
+mv ./%{php_pear_dir}/DB/DataObject/createTables.php DB_DataObject_createTables
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
 %pear_package_install
+install DB_DataObject_createTables $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -70,5 +74,6 @@ fi
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/docs/example.ini
 %{php_pear_dir}/.registry/*.reg
+%attr(755,root,root) %{_bindir}/DB_DataObject_createTables
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php

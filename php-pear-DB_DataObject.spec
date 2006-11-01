@@ -8,7 +8,7 @@ Summary:	%{_pearname} - an SQL builder, object interface to database tables
 Summary(pl):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.8.4
-Release:	3
+Release:	4
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -19,6 +19,7 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.3
+Requires:	php-overload
 Requires:	php-pear >= 4:1.0-8
 Requires:	php-pear-DB >= 1.7.0
 Requires:	php-pear-Date >= 1.4.3

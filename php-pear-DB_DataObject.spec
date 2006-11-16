@@ -8,7 +8,7 @@ Summary:	%{_pearname} - an SQL builder, object interface to database tables
 Summary(pl):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.8.4
-Release:	4
+Release:	5
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -51,6 +51,14 @@ DataObject pe³ni 2 zadania:
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package cli
+Summary:	CLI interface for DB_DataObject
+Group:		Development/Languages/PHP
+Requires:	%{name} = %{version}-%{release}
+
+%description cli
+CLI interface for DB_DataObject generator.
+
 %prep
 %pear_package_setup
 mv ./%{php_pear_dir}/DB/DataObject/createTables.php DB_DataObject_createTables
@@ -73,8 +81,13 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
-%doc docs/%{_pearname}/docs/example.ini
 %{php_pear_dir}/.registry/*.reg
-%attr(755,root,root) %{_bindir}/DB_DataObject_createTables
 %{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Cast.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Generator.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Error.php
+
+%files cli
+%defattr(644,root,root,755)
+%doc docs/%{_pearname}/docs/example.ini
+%attr(755,root,root) %{_bindir}/DB_DataObject_createTables

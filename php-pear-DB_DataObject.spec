@@ -53,11 +53,15 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package cli
 Summary:	CLI interface for DB_DataObject
+Summary(pl):	Interfejs linii poleceñ dla DB_DataObject
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 
 %description cli
 CLI interface for DB_DataObject generator.
+
+%description cli -l pl
+Interfejs linii poleceñ dla generatora DB_DataObject.
 
 %prep
 %pear_package_setup

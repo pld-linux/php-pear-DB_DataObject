@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - an SQL builder, object interface to database tables
-Summary(pl):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
+Summary(pl.UTF-8):   %{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.8.5
 Release:	1
@@ -40,12 +40,12 @@ DataObject performs 2 tasks:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-G³ówna klasa zosta³a stworzona tak, by byæ rozszerzaln± dla ka¿dej
-tabeli, wiêc mo¿na umie¶ciæ logikê danych w klasach danych. Do³±czony
-jest generator do tworzenia plików konfiguracyjnych i klas bazowych.
-DataObject pe³ni 2 zadania:
-- tworzy zapytania SQL bazuj±c na zmiennych obiektowych i metodach
+%description -l pl.UTF-8
+GÅ‚Ã³wna klasa zostaÅ‚a stworzona tak, by byÄ‡ rozszerzalnÄ… dla kaÅ¼dej
+tabeli, wiÄ™c moÅ¼na umieÅ›ciÄ‡ logikÄ™ danych w klasach danych. DoÅ‚Ä…czony
+jest generator do tworzenia plikÃ³w konfiguracyjnych i klas bazowych.
+DataObject peÅ‚ni 2 zadania:
+- tworzy zapytania SQL bazujÄ…c na zmiennych obiektowych i metodach
   tworzenia
 - przechowuje dane z wiersza tabeli.
 
@@ -53,15 +53,15 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package cli
 Summary:	CLI interface for DB_DataObject
-Summary(pl):	Interfejs linii poleceñ dla DB_DataObject
+Summary(pl.UTF-8):   Interfejs linii poleceÅ„ dla DB_DataObject
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 
 %description cli
 CLI interface for DB_DataObject generator.
 
-%description cli -l pl
-Interfejs linii poleceñ dla generatora DB_DataObject.
+%description cli -l pl.UTF-8
+Interfejs linii poleceÅ„ dla generatora DB_DataObject.
 
 %prep
 %pear_package_setup

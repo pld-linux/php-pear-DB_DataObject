@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - an SQL builder, object interface to database tables
-Summary(pl.UTF-8):   %{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
+Summary(pl.UTF-8):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{_pearname}
 Version:	1.8.5
 Release:	1
@@ -53,7 +53,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package cli
 Summary:	CLI interface for DB_DataObject
-Summary(pl.UTF-8):   Interfejs linii poleceń dla DB_DataObject
+Summary(pl.UTF-8):	Interfejs linii poleceń dla DB_DataObject
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 

@@ -1,24 +1,20 @@
+%define		status		stable
+%define		pearname	DB_DataObject
 %include	/usr/lib/rpm/macros.php
-%define		_class		DB
-%define		_subclass	DataObject
-%define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
-
-Summary:	%{_pearname} - an SQL builder, object interface to database tables
-Summary(pl.UTF-8):	%{_pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
-Name:		php-pear-%{_pearname}
-Version:	1.9.5
-Release:	2
+Summary:	%{pearname} - an SQL builder, object interface to database tables
+Summary(pl.UTF-8):	%{pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
+Name:		php-pear-%{pearname}
+Version:	1.9.6
+Release:	1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	c8bc3c1644ed54498c9bbb62f82109e1
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	347550aba68c3fd2646f5ab4eaba9a14
 Patch0:		DB_DataObject-PLD.patch
 URL:		http://pear.php.net/package/DB_DataObject/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(overload)
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-common >= 3:4.3
 Requires:	php-pear >= 4:1.0-8
 Requires:	php-pear-DB >= 1.7.0
@@ -29,7 +25,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude optional dependencies
-%define		_noautoreq	'pear(Validate.*)' 'pear(MDB2.*)'
+%define		_noautoreq	pear(Validate.*) pear(MDB2.*)
 
 %description
 The core class is designed to be extended for each of your tables so
@@ -40,7 +36,7 @@ DataObject performs 2 tasks:
   methods,
 - acts as a datastore for a table row.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Główna klasa została stworzona tak, by być rozszerzalną dla każdej
@@ -51,7 +47,7 @@ DataObject pełni 2 zadania:
   tworzenia
 - przechowuje dane z wiersza tabeli.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %package cli
 Summary:	CLI interface for DB_DataObject
@@ -74,7 +70,7 @@ mv ./%{php_pear_dir}/DB/DataObject/createTables.php DB_DataObject_createTables
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
 %pear_package_install
-install DB_DataObject_createTables $RPM_BUILD_ROOT%{_bindir}
+install -p DB_DataObject_createTables $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -88,12 +84,12 @@ fi
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Cast.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Generator.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Error.php
+%{php_pear_dir}/DB/*.php
+%{php_pear_dir}/DB/DataObject/Cast.php
+%{php_pear_dir}/DB/DataObject/Generator.php
+%{php_pear_dir}/DB/DataObject/Error.php
 
 %files cli
 %defattr(644,root,root,755)
-%doc docs/%{_pearname}/docs/example.ini
+%doc docs/%{pearname}/docs/example.ini
 %attr(755,root,root) %{_bindir}/DB_DataObject_createTables

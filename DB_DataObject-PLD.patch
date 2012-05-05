@@ -6,12 +6,3 @@
  <?php
  // +----------------------------------------------------------------------+
  // | PHP Version 4                                                        |
-@@ -33,7 +33,7 @@
- }
- 
- if (!@$_SERVER['argv'][1]) {
--    PEAR::raiseError("\nERROR: createTable.php usage:\n\nC:\php\pear\DB\DataObjects\createTable.php example.ini\n\n", null, PEAR_ERROR_DIE);
-+    PEAR::raiseError("\nERROR: DB_DataObject_createTables usage:\n\nDB_DataObject_createTables example.ini\n\n", null, PEAR_ERROR_DIE);
-     exit;
- }
- 

@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	DB_DataObject
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - an SQL builder, object interface to database tables
 Summary(pl.UTF-8):	%{pearname} - SQL builder, obiektowy interfejs do tabel bazodanowych
 Name:		php-pear-%{pearname}

@@ -63,7 +63,7 @@ Interfejs linii poleceń dla generatora DB_DataObject.
 %prep
 %pear_package_setup
 mv ./%{php_pear_dir}/DB/DataObject/createTables.php DB_DataObject_createTables
-%patch0 -p1
+%patch -P0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
